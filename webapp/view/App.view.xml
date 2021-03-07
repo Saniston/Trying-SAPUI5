@@ -1,0 +1,79 @@
+<mvc:View
+	height="100%" 
+	controllerName="mystore.controller.App"
+	xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form" 
+    xmlns:m="sap.m"
+    xmlns:c="sap.ui.commons" 
+    xmlns="sap.ui.comp.variants">
+    <l:Grid defaultSpan="L10 M7 S12" width="auto">
+        <l:content>
+            <f:SimpleForm 
+                id="SimpleFormChange354" 
+                minWidth="1024" 
+                maxContainerCols="2" 
+                layout="ResponsiveLayout" 
+                editable="true" 
+                visible="true">
+
+                <f:content>
+                    <!--Campos de Preenchimento-->
+                    <m:Label text="Nome"  labelFor="Name"/>
+                    <m:Input 
+                        id="Name"
+                        placeholder="Digite o nome..." 
+                        valueHelpRequest="valueHelpRequest"  
+                        required="true" 
+                        width="55%"/>
+                
+                    <m:Label text="E-mail"/>
+                    <m:Input 
+                        id="Email" 
+                        placeholder="Digite o e-mail..."
+                        valueHelpRequest="valueHelpRequest" 
+                        required="true" 
+                        width="55%"/>
+                
+                    <m:Label text="Telefone"/>
+                    <m:MaskInput 
+                        id="Phone"
+                        mask="99-99999-9999"
+                        placeholder="Digite o telefone..." 
+                        required="true" 
+                        width="55%"/>
+                    <m:Label text="Endereço"/>
+                    <m:Input 
+                        id="Address"
+                        placeholder="Digite o endereço..."
+                        required="true" 
+                        width="55%" />
+                    <m:Label/><m:Label/>
+                    <!--Botões de interação-->
+                    <m:Button 
+                        type="Accept" 
+                        text="{i18n>addAgenda}" 
+                        press=".onSaveContact" 
+                        width="40%" />
+                    <m:Button 
+                        type="Reject"
+                        text="{i18n>removeAgenda}" 
+                        press=".onClearFields" 
+                        width="30%"/>
+                    <m:Label/>
+                    <!--Caixa de Texto-->
+                    <m:TextArea
+                        id="Screen"
+                        value=""
+                        width="90%"
+                        height="50%"
+                        editable="false"
+                        valueState="Information state"
+                        />					
+                </f:content>
+            </f:SimpleForm>
+            </l:content>
+    </l:Grid>
+    
+
+</mvc:View>
